@@ -32,6 +32,8 @@ Route::get("list-departemen/{id?}", [DepartemenController::class, 'getListDepart
 
 Route::post("add-komentar", [KomentarController::class, 'add']);
 Route::get("list-komentar/{id?}", [KomentarController::class, 'getListKomentar']);
+Route::put("edit-komentar", [KomentarController::class, 'editKomentar']);
+
 
 Route::post("add-tertarik-elektif", [TertarikElektifController::class, 'add']);
 Route::get("list-tertarik-elektif/{id?}", [TertarikElektifController::class, 'getListTertarikElektif']);
@@ -56,3 +58,8 @@ Route::get("/test-repo-elektif/{id?}", [mata_kuliah_controller::class, 'getMataK
 Route::get("/repo-list-tertarik/{id?}", [TertarikElektifController::class, 'getMataKuliahElektif']);
 Route::post("/repo-add-tertarik", [TertarikElektifController::class, 'addTertarik']);
 Route::delete("/repo-delete-tertarik/{id?}",[TertarikElektifController::class, 'deleteTertarikElektif'] );
+
+// routing komentar
+Route::get("/repo-list-komentar/{id?}", [KomentarController::class, 'getListKomentar']);
+Route::post("/repo-add-komentar", [KomentarController::class, 'add']);
+Route::put("/repo-edit-komentar", [KomentarController::class, 'editKomentar']);

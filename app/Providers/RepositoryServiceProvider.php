@@ -7,6 +7,8 @@ use App\Repository\MataKuliahRepositoryInterface;
 use App\Repository\Eloquent\MataKuliahRepository;
 use App\Repository\TertarikElektifRepositoryInterface;
 use App\Repository\Eloquent\TertarikElektifRepository;
+use App\Repository\KomentarRepositoryInterface;
+use App\Repository\Eloquent\KomentarRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,7 @@ class RepositoryServiceProvider extends ServiceProvider
         //
         $this->app->bind(MataKuliahRepositoryInterface::class, MataKuliahRepository::class);
         $this->app->bind(TertarikElektifRepositoryInterface::class, TertarikElektifRepository::class);
+        $this->app->bind(KomentarRepositoryInterface::class, KomentarRepository::class);
     }
 
     /**

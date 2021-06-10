@@ -11,6 +11,8 @@ class komentar extends Model
     protected $fillable = [
         'username',
         'nim',
-        'komentar' 
+        'komentar',
+        'id_mata_kuliah',
+        'id_civitas_ipb' 
     ];
 }
