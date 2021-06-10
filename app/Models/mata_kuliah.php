@@ -12,6 +12,10 @@ class mata_kuliah extends Model
     protected $fillable = [
         'nama_mata_kuliah',
         'nama_departemen',
-        'deskripsi' 
+        'deskripsi',
+        'id_civitas_ipb',
+        'kode_mk',
+        'semester',
+        'jenis',
     ];
 }

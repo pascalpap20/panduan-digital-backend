@@ -43,3 +43,16 @@ Route::get("/users", [UserByMySelfController::class, 'users']);
 
 Route::post("/add-mk-elektif", [MataKuliahElektifController::class, 'add']);
 Route::get("/list-mk-elektif/{id?}", [MataKuliahElektifController::class, 'getListMataKuliahElektif']);
+
+
+// REPO TEST
+// routing matakuliah biasa
+Route::get("/test-repo/{id?}", [mata_kuliah_controller::class, 'getMataKuliah']);
+Route::post("/test-add-repo", [mata_kuliah_controller::class, 'addData']);
+// routing mata kuliah elektif
+Route::get("/test-repo-elektif/{id?}", [mata_kuliah_controller::class, 'getMataKuliahElektif']);
+
+// routing tertarik elektif
+Route::get("/repo-list-tertarik/{id?}", [TertarikElektifController::class, 'getMataKuliahElektif']);
+Route::post("/repo-add-tertarik", [TertarikElektifController::class, 'addTertarik']);
+Route::delete("/repo-delete-tertarik/{id?}",[TertarikElektifController::class, 'deleteTertarikElektif'] );
