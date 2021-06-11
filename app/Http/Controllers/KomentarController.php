@@ -66,4 +66,8 @@ class KomentarController extends Controller
     public function editKomentar(Request $req){
         return $this->komentarRepo->updateKomentar($req);
     }
+
+    public function deleteKomentar($id) {
+        return $this->komentarRepo->delete($id);
+    }
 }

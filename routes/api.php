@@ -63,3 +63,4 @@ Route::delete("/repo-delete-tertarik/{id?}",[TertarikElektifController::class, '
 Route::get("/repo-list-komentar/{id?}", [KomentarController::class, 'getListKomentar']);
 Route::post("/repo-add-komentar", [KomentarController::class, 'add']);
 Route::put("/repo-edit-komentar", [KomentarController::class, 'editKomentar']);
+Route::delete("/repo-delete-komentar/{id?}", [KomentarController::class, 'deleteKomentar']);

@@ -50,4 +50,15 @@ class KomentarRepository implements KomentarRepositoryInterface {
 			return ["Result" => "Failed"];
 		}
     }
+    
+    public function delete($id){
+        $komentar = $this->model->find($id);
+        $result = $komentar->delete();
+        if($result){
+            return ["result"=>"record has been deleted"];
+        } else {
+            return ["result"=>"Failed to delete"];
+        }
+    }
+
 }
