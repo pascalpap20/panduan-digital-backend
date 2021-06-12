@@ -2,11 +2,11 @@
 
 namespace App\Repository\Eloquent;
 use App\Repository\TertarikElektifRepositoryInterface;
-use App\Models\TertarikELektif;
+use App\Models\TertarikElektif;
 
 class TertarikElektifRepository implements TertarikElektifRepositoryInterface {
 	protected $model;
-	public function __construct(TertarikELektif $model) {
+	public function __construct(TertarikElektif $model) {
 		$this->model = $model;
 	}
 
